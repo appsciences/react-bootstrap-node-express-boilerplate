@@ -22,6 +22,11 @@ var config = {
                 query: {
                     presets: ['react','es2015']
                 }
+            },
+            // Build css loaded with require
+            {
+                test: /\.css$/,
+                loader: "style!css"
             }
         ]
     },
@@ -30,7 +35,7 @@ var config = {
         // copy static files
         new CopyWebpackPlugin([
             { from: './app/images', to: 'images' },
-            { from: './app/index.html', to: 'index.html' },
+            { from: './app/index.html', to: 'index.html' }
         ])
     ]
 

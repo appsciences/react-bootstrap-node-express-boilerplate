@@ -3,6 +3,8 @@ const React = require('react'),
     ReactDOM = require('react-dom');
 
 
+const Neighborhoods = require('./components/neighborhoods');
+
 const ReactBootstrap = require('react-bootstrap'),
     Well = ReactBootstrap.Well,
     Panel = ReactBootstrap.Panel,
@@ -23,29 +25,13 @@ const Application = React.createClass({
 
     render() {
 
-        var i = 0;
         return (
 
-            <Grid>
-                <Row>
-                    <Col xs={4}>
-                        <h1>React Demo</h1>
-                    </Col>
-
-                </Row>
-                {
-                    this.status.alerts.map(() => (
-                        <Row>
-                            <Col xs={4}>
-                                        <Alert><h3>Hello {this.props.name}</h3></Alert>
-                            </Col>
-
-                        </Row>)
-                    );
-                }
-
-
-            </Grid>
+            <Well>
+                <Panel header={<h2>New York Neighborhoods</h2>}>
+                    <Neighborhoods/>
+                </Panel>
+            </Well>
 
 
         );

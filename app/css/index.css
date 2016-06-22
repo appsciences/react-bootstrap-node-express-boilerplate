@@ -1,0 +1,8 @@
+/*To import other css files in the project:*/
+
+/*@import "../../node_modules/react-select/dist/react-select.css";*/
+
+
+body {
+    background-color: #4A768D;
+}
